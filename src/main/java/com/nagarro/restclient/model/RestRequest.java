@@ -1,0 +1,79 @@
+package com.nagarro.restclient.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class RestRequest{
+
+	/**
+	 * 
+	 */
+	private String depLoc;
+	private String arrLoc;
+	private String flightDate;
+	private String flightClass;
+	private String preference;
+	private String loc;
+	private String airline;
+
+	public RestRequest() {
+		
+	}
+	
+	public String getAirline() {
+		return airline;
+	}
+
+	public String getArrLoc() {
+		return arrLoc;
+	}
+
+	public String getDepLoc() {
+		return depLoc;
+	}
+
+	public String getFlightClass() {
+		return flightClass;
+	}
+
+	public String getFlightDate() {
+		return flightDate;
+	}
+
+	public String getLoc() {
+		return loc;
+	}
+
+	public String getPreference() {
+		return preference;
+	}
+
+	public void setAirline(String airline) {
+		this.airline = airline;
+	}
+
+	public void setArrLoc(String arrLoc) {
+		this.arrLoc = arrLoc;
+	}
+
+	public void setDepLoc(String depLoc) {
+		this.depLoc = depLoc;
+	}
+
+	public void setFlightClass(String flightClass) {
+		this.flightClass = flightClass;
+	}
+
+	public void setFlightDate(String flightDate) {
+		this.flightDate = flightDate;
+	}
+
+	public void setLoc(String loc) {
+		this.loc = loc;
+	}
+
+	public void setPreference(String preference) {
+		this.preference = preference;
+	}
+
+}

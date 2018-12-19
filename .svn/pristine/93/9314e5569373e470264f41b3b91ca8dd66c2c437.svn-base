@@ -1,0 +1,12 @@
+package com.nagarro.restclient.service;
+
+import java.util.List;
+
+import com.nagarro.model.RestFlightDetail;
+import com.nagarro.model.RestRequest;
+
+public interface RestFlightDetailService {
+	
+	List<RestFlightDetail> findFlights (RestRequest userInput);
+
+}

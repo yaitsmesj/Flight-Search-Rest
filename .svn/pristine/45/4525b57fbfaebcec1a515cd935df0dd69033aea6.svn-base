@@ -1,0 +1,28 @@
+package com.nagarro.restclient.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nagarro.model.RestFlightDetail;
+import com.nagarro.model.RestRequest;
+import com.nagarro.restclient.service.RestFlightDetailService;
+
+@RestController
+@RequestMapping(value="/rest")
+public class RestControllerClient {
+
+	@Autowired
+	RestFlightDetailService restFlightDetailService;
+
+	@RequestMapping(value = "/getFlights", method = RequestMethod.POST)
+	public List<RestFlightDetail> getFlights(@RequestBody RestRequest userInput) {
+		List<RestFlightDetail> flightList = restFlightDetailService.findFlights(userInput);
+		return flightList;
+	}
+
+}

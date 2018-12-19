@@ -1,0 +1,33 @@
+package com.nagarro.model;
+
+import java.io.Serializable;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class RestFlightDetail implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private FlightDetail flight1;
+	private FlightDetail flight2;
+
+	public FlightDetail getFlight1() {
+		return flight1;
+	}
+
+	public void setFlight1(FlightDetail flight1) {
+		this.flight1 = flight1;
+	}
+
+	public FlightDetail getFlight2() {
+		return flight2;
+	}
+
+	public void setFlight2(FlightDetail flight2) {
+		this.flight2 = flight2;
+	}
+
+}

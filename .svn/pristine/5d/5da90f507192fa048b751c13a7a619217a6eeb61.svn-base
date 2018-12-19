@@ -1,0 +1,14 @@
+package com.nagarro.restclient.repository;
+
+import java.util.List;
+
+import com.nagarro.model.RestFlightDetail;
+import com.nagarro.model.RestRequest;
+
+public interface RestFlightDetailsDao {
+
+	List<RestFlightDetail> getMatchingFlights(RestRequest userInput);
+
+	List<RestFlightDetail> getFlights(RestRequest userInput);
+
+}
